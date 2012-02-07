@@ -42,8 +42,10 @@ Gem::Specification.new do |s|
     "lib/models/matchers/scope_time_matchers.rb",
     "lib/models/matchers/suit_matcher_base.rb",
     "lib/suit.rb",
+    "lib/suit_factories.rb",
     "spec/controllers/matchers/login_matcher_spec.rb",
-    "spec/spec_helper.rb"
+    "spec/spec_helper.rb",
+    "suit.gemspec"
   ]
   s.homepage = "http://github.com/tatemae/suit"
   s.licenses = ["MIT"]
