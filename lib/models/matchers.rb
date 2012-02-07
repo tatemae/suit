@@ -1,3 +1,5 @@
+$LOAD_PATH << File.dirname(__FILE__) unless $LOAD_PATH.include?(File.dirname(__FILE__))
+
 require 'matchers/suit_matcher_base'
 require 'matchers/scope_creator_matchers'
 require 'matchers/scope_is_public_matchers'

@@ -1,3 +1,5 @@
+$LOAD_PATH << File.dirname(__FILE__) unless $LOAD_PATH.include?(File.dirname(__FILE__))
+
 require 'matchers/login_matcher'
 require 'matchers/role_matcher'
 
