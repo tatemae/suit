@@ -3,17 +3,20 @@ $LOAD_PATH << File.dirname(__FILE__) unless $LOAD_PATH.include?(File.dirname(__F
 module Suit
 end
 
+require 'rails'
+
 require 'rspec/core'
 require 'rspec/mocks'
 require 'rspec/expectations'
 
 require 'factory_girl'
-require 'suit_factories'
 require 'models/matchers'
 require 'controllers/matchers'
 
+require 'suit/engine'
+
 RSpec.configure do |config|
   config.include(Suit::Models::Matchers)
-  config.include(Suit::Controllers::Matchers)
+  config.include(Suit::Controllers::Matchers, :type => :controller)
   config.color_enabled = true
 end
