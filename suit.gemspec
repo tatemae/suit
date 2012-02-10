@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "suit"
-  s.version = "0.1.0"
+  s.version = "0.1.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball"]
-  s.date = "2012-02-07"
+  s.date = "2012-02-10"
   s.description = "A collection of commonly used rspec matchers"
   s.email = "justinball@gmail.com"
   s.extra_rdoc_files = [
@@ -42,7 +42,8 @@ Gem::Specification.new do |s|
     "lib/models/matchers/scope_time_matchers.rb",
     "lib/models/matchers/suit_matcher_base.rb",
     "lib/suit.rb",
-    "lib/suit_factories.rb",
+    "lib/suit/engine.rb",
+    "lib/suit/factories.rb",
     "spec/controllers/matchers/login_matcher_spec.rb",
     "spec/spec_helper.rb",
     "suit.gemspec"
