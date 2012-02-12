@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "suit"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball"]
-  s.date = "2012-02-10"
+  s.date = "2012-02-12"
   s.description = "A collection of commonly used rspec matchers"
   s.email = "justinball@gmail.com"
   s.extra_rdoc_files = [
