@@ -22,8 +22,8 @@ module Suit # :nodoc:
         def matches?(subject)
           @subject = subject
           @subject.class.delete_all
-          public_item = Factory(factory_name, @field => true)
-          not_public_item = Factory(factory_name, @field => false)
+          public_item = FactoryGirl.create(factory_name, @field => true)
+          not_public_item = FactoryGirl.create(factory_name, @field => false)
           @subject.class.send(@scope).include?(public_item) &&
             !@subject.class.send(@scope).include?(not_public_item)
         end

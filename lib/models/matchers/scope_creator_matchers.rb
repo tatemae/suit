@@ -42,10 +42,10 @@ module Suit # :nodoc:
         def matches?(subject)
           @subject = subject
           @subject.class.delete_all
-          @user = Factory(:user)
-          @user1 = Factory(:user)
-          @item = Factory(factory_name, @field => @user)
-          @item1 = Factory(factory_name, @field => @user1)
+          @user = FactoryGirl.create(:user)
+          @user1 = FactoryGirl.create(:user)
+          @item = FactoryGirl.create(factory_name, @field => @user)
+          @item1 = FactoryGirl.create(factory_name, @field => @user1)
           items = @subject.class.send(@scope, @user)
           items.include?(@item) && !items.include?(@item1)
         end

@@ -32,8 +32,8 @@ module Suit # :nodoc:
         def matches?(subject)
           @subject = subject
           @subject.class.delete_all
-          old_item = Factory(factory_name, @field => 1.month.ago)
-          new_item = Factory(factory_name, @field => 1.day.ago)
+          old_item = FactoryGirl.create(factory_name, @field => 1.month.ago)
+          new_item = FactoryGirl.create(factory_name, @field => 1.day.ago)
           items = @subject.class.send(@scope, 1.week.ago)          
           if @scope == :newer_than
             items.include?(new_item) && !items.include?(old_item)

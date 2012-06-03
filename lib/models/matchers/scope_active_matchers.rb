@@ -22,8 +22,8 @@ module Suit # :nodoc:
         def matches?(subject)
           @subject = subject
           @subject.class.delete_all
-          active_item = Factory(factory_name, @field => true)
-          not_active_item = Factory(factory_name, @field => false)
+          active_item = FactoryGirl.create(factory_name, @field => true)
+          not_active_item = FactoryGirl.create(factory_name, @field => false)
           @subject.class.send(@scope).include?(active_item) &&
             !@subject.class.send(@scope).include?(not_active_item)
         end

@@ -27,8 +27,8 @@ module Suit # :nodoc:
         def matches?(subject)
           @subject = subject
           @subject.class.delete_all
-          @first = Factory(factory_name, @field => 1)
-          @second = Factory(factory_name, @field => 2)
+          @first = FactoryGirl.create(factory_name, @field => 1)
+          @second = FactoryGirl.create(factory_name, @field => 2)
           @first == @subject.class.send(@scope)[0] && @second == @subject.class.send(@scope)[1]
         end
         
