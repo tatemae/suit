@@ -64,19 +64,19 @@ module Suit # :nodoc:
           if @scope == :by_newest
             first = FactoryGirl.create(factory_name, :created_at => 1.hour.ago)
             second = FactoryGirl.create(factory_name, :created_at => 1.day.ago)
-            first == @subject.class.send(@scope)[0] && second == @subject.class.send(@scope)[1]
+            @subject.class.send(@scope).index(first) < @subject.class.send(@scope).index(second)
           elsif @scope == :by_oldest
             first = FactoryGirl.create(factory_name, :created_at => 1.day.ago)
             second = FactoryGirl.create(factory_name, :created_at => 1.hour.ago)
-            first == @subject.class.send(@scope)[0] && second == @subject.class.send(@scope)[1]            
+            @subject.class.send(@scope).index(first) < @subject.class.send(@scope).index(second)
           elsif @scope == :by_latest
             first = FactoryGirl.create(factory_name, :updated_at => 1.hour.ago)
             second = FactoryGirl.create(factory_name, :updated_at => 1.day.ago)
-            first == @subject.class.send(@scope)[0] && second == @subject.class.send(@scope)[1]
+            @subject.class.send(@scope).index(first) < @subject.class.send(@scope).index(second)
           else
             first = FactoryGirl.create(factory_name, @field => 'a')
             second = FactoryGirl.create(factory_name, @field => 'b')
-            first == @subject.class.send(@scope)[0] && second == @subject.class.send(@scope)[1]
+            @subject.class.send(@scope).index(first) < @subject.class.send(@scope).index(second)
           end
         end
         
