@@ -21,7 +21,7 @@ FactoryGirl.define do
   end
 
   sequence :abbr do |n|
-    "abbr#{n}"
+    "a#{n}"
   end
 
   sequence :uri do |n|
