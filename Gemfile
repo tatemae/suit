@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
 gem "activesupport", ">= 2.3.5"
-gem "rspec", "~> 2.8.0"
+gem "rspec", ">= 2.8.0"
 gem "factory_girl", ">= 1.3.0"
 
 # Add dependencies to develop your gem here.
