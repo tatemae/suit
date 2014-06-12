@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Justin Ball"]
-  s.date = "2013-07-30"
+  s.date = "2014-06-12"
   s.description = "A collection of commonly used rspec matchers"
   s.email = "justinball@gmail.com"
   s.extra_rdoc_files = [
