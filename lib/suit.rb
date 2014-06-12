@@ -18,5 +18,4 @@ require 'suit/engine'
 RSpec.configure do |config|
   config.include(Suit::Models::Matchers)
   config.include(Suit::Controllers::Matchers)
-  config.color = true
 end
